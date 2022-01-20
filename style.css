@@ -94,3 +94,11 @@ input:focus {
 .day {
   color: #06a77a;
 }
+
+.source-part {
+  font-weight: 600;
+}
+
+.source-link {
+  text-decoration: none;
+}
