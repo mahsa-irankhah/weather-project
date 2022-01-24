@@ -47,6 +47,11 @@ function displayWeather(response) {
   let description = document.querySelector("#main-status");
   description.innerHTML = response.data.weather[0].description;
 
+  //show icon
+
+  let icon = document.querySelector("#main-icon");
+  icon.setAttribute("src", ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
 }
 
 function positionHandler(position) {
