@@ -22,8 +22,8 @@ function showTime(date) {
 }
 
 function displayWeather(response) {
+  console.log(response)
   //showing tempreture
-console.log(response.data.name)
   let realTemp = Math.round(response.data.main.temp)
   let temperature = document.querySelector("#main-temp");
   let weatherStatement = document.querySelector("h1")
@@ -41,6 +41,11 @@ console.log(response.data.name)
   let realWind = Math.round(response.data.wind.speed);
   let wind = document.querySelector("#wind-speed");
   wind.innerHTML = realWind;
+
+  //show description
+
+  let description = document.querySelector("#main-status");
+  description.innerHTML = response.data.weather[0].description;
 
 }
 
