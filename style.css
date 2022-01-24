@@ -76,6 +76,11 @@ input:focus {
   font-size: 30px;
 }
 
+#temp-range {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .days p {
   font-size: 14px;
   font-weight: 700;
