@@ -58,7 +58,7 @@ function displayWeather(response) {
   let tempRange = document.querySelector("#temp-range");
   tempRange.innerHTML = `${Math.round(
     response.data.main.temp_min
-  )}°c _ ${Math.round(response.data.main.temp_max)}°c`;
+  )}°c , ${Math.round(response.data.main.temp_max)}°c`;
 }
 
 function positionHandler(position) {
