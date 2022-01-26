@@ -81,10 +81,6 @@ input:focus {
   font-weight: bold;
 }
 
-.days p {
-  font-size: 14px;
-  font-weight: 700;
-}
 
 .image {
   margin-top: 0;
@@ -97,10 +93,6 @@ input:focus {
 
 #main-status {
   font-size: 22px;
-}
-
-.day {
-  color: #06a77a;
 }
 
 .source-part {
