@@ -19,6 +19,39 @@ function showTime(date) {
   return `${days[currentDate.getDay()]} <br/> ${hours}:${minutes}`;
 }
 
+function displayForecast(coordinates) {
+  let apiKey = "400f755361803d28237d7c1751e11b72";
+  let lat = coordinates.lat;
+  let lon = coordinates.lon;
+  let forecastUrlApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  
+
+  axios.get(forecastUrlApi).then(displayForcastDivs)
+}
+
+function displayForcastDivs(response) {
+  console.log(response);
+  let days = response.data.daily;
+  let forecastText = `<div class="row">`;
+  
+  days.forEach(day => {
+    forecastText =
+      forecastText +
+      ` <div class="col-3">
+          <p class="day">Thu</p>
+            <img class="image-icon" src="http://openweathermap.org/img/wn/10n@2x.png" alt="icon" />
+         <div class="forecast-temp-range">
+            <span class="min">1°</span> <span class="max">6°</span>
+          </div>
+        </div>`;
+  });
+
+    forecastText = forecastText + `</div>`;
+    let forecastDiv = document.querySelector("#forecast");
+    forecastDiv.innerHTML = forecastText;
+  
+}
+
 function displayWeather(response) {
   console.log(response);
   //showing tempreture
@@ -59,7 +92,14 @@ function displayWeather(response) {
   tempRange.innerHTML = `${Math.round(
     response.data.main.temp_min
   )}°c , ${Math.round(response.data.main.temp_max)}°c`;
+
+
+  // showing forecast
+
+  displayForecast(response.data.coord);
 }
+
+
 
 function positionHandler(position) {
   let latitude = position.coords.latitude;
