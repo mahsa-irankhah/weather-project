@@ -24,36 +24,57 @@ function displayForecast(coordinates) {
   let lat = coordinates.lat;
   let lon = coordinates.lon;
   let forecastUrlApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  
 
-  axios.get(forecastUrlApi).then(displayForcastDivs)
+  axios.get(forecastUrlApi).then(displayForcastDivs);
 }
 
 function displayForcastDivs(response) {
-  console.log(response);
   let days = response.data.daily;
   let forecastText = `<div class="row">`;
-  
-  days.forEach(day => {
-    forecastText =
-      forecastText +
-      ` <div class="col-3">
-          <p class="day">Thu</p>
-            <img class="image-icon" src="http://openweathermap.org/img/wn/10n@2x.png" alt="icon" />
+
+  days.forEach((day, index) => {
+    if (index < 4) {
+      forecastText =
+        forecastText +
+        ` <div class="col-3">
+          <p class="day">${dayFormat(response.data.daily[index].dt)}</p>
+            <img class="image-icon" src="http://openweathermap.org/img/wn/${
+              response.data.daily[index].weather[0].icon
+            }@2x.png" alt="icon" />
          <div class="forecast-temp-range">
-            <span class="min">1°</span> <span class="max">6°</span>
+            <span class="min">${Math.round(
+              response.data.daily[index].temp.min
+            )}°</span> <span class="max">${Math.round(
+          response.data.daily[index].temp.max
+        )}°</span>
           </div>
         </div>`;
+    }
   });
 
-    forecastText = forecastText + `</div>`;
-    let forecastDiv = document.querySelector("#forecast");
-    forecastDiv.innerHTML = forecastText;
-  
+  forecastText = forecastText + `</div>`;
+  let forecastDiv = document.querySelector("#forecast");
+  forecastDiv.innerHTML = forecastText;
+}
+
+function dayFormat(dt) {
+  let forcastTime = new Date(dt * 1000);
+  let days = [
+    "sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let forecastDay = forcastTime.getDay();
+  let forecastDayName = days[forecastDay];
+
+  return forecastDayName;
 }
 
 function displayWeather(response) {
-  console.log(response);
   //showing tempreture
   let realTemp = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#main-temp");
@@ -93,13 +114,10 @@ function displayWeather(response) {
     response.data.main.temp_min
   )}°c , ${Math.round(response.data.main.temp_max)}°c`;
 
-
   // showing forecast
 
   displayForecast(response.data.coord);
 }
-
-
 
 function positionHandler(position) {
   let latitude = position.coords.latitude;
