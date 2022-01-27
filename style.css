@@ -99,6 +99,21 @@ input:focus {
   font-size: 22px;
 }
 
+.day {
+  margin: 0;
+  padding: 0;
+  color: #068761;
+}
+
+.image-icon {
+  padding: 0;
+  margin: 0;
+}
+
+.min {
+  opacity: 0.6;
+}
+
 .source-part {
   font-weight: 600;
 }
