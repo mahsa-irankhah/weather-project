@@ -117,7 +117,7 @@ input:focus {
   text-align: center;
   border-radius: 10px;
   box-shadow: rgba(23, 53, 53, 0.39) 0px 18px 50px -10px;
-  box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
   background: radial-gradient(circle farthest-corner at 33% 33% , rgba(237, 243, 243, 0.2), rgba(171, 199, 195, 0.397));
   filter: drop-shadow(2px 2px 2px rgba(44, 65, 78, 0.541));
 }
