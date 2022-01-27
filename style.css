@@ -10,7 +10,9 @@ body {
   background-color: rgba(216, 216, 216, 0.5);
   margin: 30px auto;
   border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px; */
+    box-shadow: rgba(23, 53, 53, 0.39) 0px 18px 50px -10px;
+  box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
 }
 h1 {
   padding: 30px;
