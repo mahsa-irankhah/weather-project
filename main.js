@@ -110,9 +110,9 @@ function displayWeather(response) {
   //show temperature range
 
   let tempRange = document.querySelector("#temp-range");
-  tempRange.innerHTML = `${Math.round(
+  tempRange.innerHTML = `<span class="min"> ${Math.round(
     response.data.main.temp_min
-  )}°c , ${Math.round(response.data.main.temp_max)}°c`;
+  )}°c </span> , ${Math.round(response.data.main.temp_max)}°c`;
 
   // showing forecast
 
