@@ -36,7 +36,7 @@ function displayForcastDivs(response) {
     if (index < 4) {
       forecastText =
         forecastText +
-        ` <div class="col-3">
+        ` <div class="col-2 forecast-day-div">
           <p class="day">${dayFormat(response.data.daily[index].dt)}</p>
             <img class="image-icon" src="http://openweathermap.org/img/wn/${
               response.data.daily[index].weather[0].icon
