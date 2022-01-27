@@ -1,6 +1,6 @@
 function showTime(date) {
   let days = [
-    "sunday",
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -60,7 +60,7 @@ function displayForcastDivs(response) {
 function dayFormat(dt) {
   let forcastTime = new Date(dt * 1000);
   let days = [
-    "sunday",
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
