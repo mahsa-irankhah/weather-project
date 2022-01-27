@@ -1,18 +1,19 @@
 body {
   text-align: center;
   font-family: "Nunito", sans-serif;
-  background-color: #9df1ed;
+  background-color: #273534;
   box-sizing: border-box;
+  color: beige;
 }
 .complete-document {
   width: 600px;
-  max-width: 90%;
-  background-color: rgba(216, 216, 216, 0.5);
+  max-width: 100%;
+  /* background-color: rgba(216, 216, 216, 0.5); */
   margin: 30px auto;
   border-radius: 30px;
-  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px; */
-    box-shadow: rgba(23, 53, 53, 0.39) 0px 18px 50px -10px;
-  box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+ 
+    /* box-shadow: rgba(23, 53, 53, 0.39) 0px 18px 50px -10px;
+  box-shadow: 20px 20px 22px rgba(0,0,0,0.2); */
 }
 h1 {
   padding: 30px;
@@ -44,11 +45,12 @@ h1 {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid gray;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   margin-bottom: 20px;
   text-align: center;
   font-size: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
+  width: 200px;
+  box-shadow: rgba(71, 70, 70, 0.1) 0px 5px 0;
 }
 
 .search-button {
@@ -57,7 +59,7 @@ h1 {
   border-radius: 30px;
   border: none;
   margin: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
+  box-shadow: rgba(73, 72, 72, 0.1) 0px 5px 5px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -76,7 +78,7 @@ input:focus {
 }
 .main-day p {
   line-height: 1.5;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #temp-range {
@@ -108,8 +110,6 @@ input:focus {
 }
 
 .forecast-day-div {
-  background-color: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(5px);
   margin: 0 auto;
   padding: 5px;
   width: 90px;
@@ -118,14 +118,14 @@ input:focus {
   border-radius: 10px;
   box-shadow: rgba(23, 53, 53, 0.39) 0px 18px 50px -10px;
   box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
-  background: radial-gradient(circle farthest-corner at 33% 33% , rgba(237, 243, 243, 0.2), rgba(171, 199, 195, 0.397));
+  backdrop-filter: blur(10px);
   filter: drop-shadow(2px 2px 2px rgba(44, 65, 78, 0.541));
 }
 
 .day {
   margin: 0;
   padding-top: 10px;
-  color: #32574c;
+  color: #8ae7cb;
   font-size: 15px;
 }
 
