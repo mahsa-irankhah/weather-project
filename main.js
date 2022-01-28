@@ -107,13 +107,6 @@ function displayWeather(response) {
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-  //show temperature range
-
-  let tempRange = document.querySelector("#temp-range");
-  tempRange.innerHTML = `<span class="min"> ${Math.round(
-    response.data.main.temp_min
-  )}°c </span> , ${Math.round(response.data.main.temp_max)}°c`;
-
   // showing forecast
 
   displayForecast(response.data.coord);
