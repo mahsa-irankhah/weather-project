@@ -28,7 +28,7 @@ h1 {
 #current-location {
   font-size: 15px;
   font-weight: 600;
-  background: #2C394B;
+  background: #334756;
   color: #000000;
   padding: 5px 20px;
   border-radius: 30px;
@@ -63,7 +63,7 @@ form {
   border-radius: 30px;
   border: none;
   margin: 10px;
-  box-shadow: rgba(73, 72, 72, 0.1) 0px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
   transition: all 0.2s ease-in-out;
 }
 
