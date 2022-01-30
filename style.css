@@ -42,6 +42,10 @@ h1 {
   color: rgb(250, 250, 250);
 }
 
+form {
+  display: inline;
+}
+
 #search-box {
   background-color: transparent;
   border: none;
