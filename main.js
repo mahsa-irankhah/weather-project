@@ -139,7 +139,11 @@ searchForm.addEventListener("submit", function (event) {
   let apiKey = "400f755361803d28237d7c1751e11b72";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(displayWeather)
+  .catch(() => {
+      let h1 = document.querySelector("h1");
+      h1.innerHTML = 'please enter a valid city'
+  })
 });
 
 //show current position weather
