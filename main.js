@@ -141,8 +141,8 @@ searchForm.addEventListener("submit", function (event) {
 
   axios.get(apiUrl).then(displayWeather)
   .catch(() => {
-      let h1 = document.querySelector("h1");
-      h1.innerHTML = 'please enter a valid city'
+      window.location.reload();
+     alert('please enter a valid city')
   })
 });
 
